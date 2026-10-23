@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-
+  <img src="img/bannerAutos.jpg" alt="Banner Taller Mecánico" class="banner">
   <header>
     <h1>Taller Mecánico</h1>
     <nav>
@@ -19,5 +19,190 @@
     </nav>
   </header>
   
+  <main>
+    <section id="inicio" class="seccion-inicio">
+      <h2>Mantenimiento y Reparación Automotriz</h2>
+      <p>Servicio técnico especializado con diagnóstico variados. Asignamos citas adaptadas a sus necesidades con multiples servicios, ajustados a sus horarios y vehiculos.</p>
+    </section>
+      
+    <section id="servicios" class="seccion-servicios">
+      <h2>Servicios Disponibles</h2> 
+      <div class="contenedor-servicios">
+        <article class="tarjeta-servicio">
+          <h3>Cambio de aceite</h3>
+          <p>Mantenimiento preventivo completo con lubricantes de alta gama.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Alineación y Balanceo</h3>
+          <p>Ajuste de precisión para mayor seguridad y optimización de llantas.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Frenos y Suspensión</h3>
+          <p>Revisión integral e intervención del sistema de frenado y suspensión.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Diagnóstico por Escáner</h3>
+          <p>Detección electrónica de fallas y lectura de códigos de error del motor.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Sistema Eléctrico y Batería</h3>
+          <p>Evaluación, carga y reparación de componentes del sistema eléctrico.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Afinación de Motor</h3>
+          <p>Limpieza de inyectores y reemplazo de bujías para máximo rendimiento.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Climatización y Aire Acondicionado</h3>
+          <p>Mantenimiento, recarga de refrigerante y desinfección del sistema de aire.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Sistema de Enfriamiento</h3>
+          <p>Inspección de radiador, mangueras y cambio de líquido refrigerante.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Embargo y Transmisión</h3>
+          <p>Revisión y mantenimiento de embrague, caja de cambios y fluidos.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Sistema de Escape y Emisiones</h3>
+          <p>Evaluación de convertidor catalítico y control de gases contaminantes.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Hojalatería y Pintura</h3>
+          <p>Reparación de carrocería, rectificación de abolladuras y acabado de pintura profesional.</p>
+        </article> 
+
+        <article class="tarjeta-servicio">
+          <h3>Rectificación y Enderezado de Chasis</h3>
+          <p>Alineación y restauración estructural mediante tecnología de precisión para devolver la geometría original al vehículo.</p>
+        </article> 
+      </div>  
+    </section>
+
+    <section class="seccion-tabla-servicios">
+    <h2>Guía de Servicios y Componentes más frecientes</h2>
+    <table>
+      <caption>Los 7 servicios frecuentes del taller y sus piezas comprometidas</caption>
+      <thead>
+        <tr>
+          <th scope="col">Servicio</th>
+          <th scope="col">Piezas Comprometidas</th>
+          <th scope="col">Tiempo Estimado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Cambio de aceite</th>
+          <td>Aceite de motor y filtro de aceite</td>
+          <td>45 minutos</td>
+        </tr>
+        <tr>
+          <th scope="row">Alineación y Balanceo</th>
+          <td>Neumáticos y terminales de dirección</td>
+          <td>60 minutos</td>
+        </tr>
+        <tr>
+          <th scope="row">Frenos y Suspensión</th>
+          <td>Pastillas, discos y amortiguadores</td>
+          <td>2 horas</td>
+        </tr>
+        <tr>
+          <th scope="row">Diagnóstico por Escáner</th>
+          <td>ECU (Computadora) y sensores electrónicos</td>
+          <td>30 minutos</td>
+        </tr>
+        <tr>
+          <th scope="row">Sistema Eléctrico y Batería</th>
+          <td>Batería, bornes y alternador</td>
+          <td>45 minutos</td>
+        </tr>
+        <tr>
+          <th scope="row">Afinación de Motor</th>
+          <td>Bujías, cables de bujía e inyectores</td>
+          <td>1.5 horas</td>
+        </tr>
+        <tr>
+          <th scope="row">Sistema de Enfriamiento</th>
+          <td>Radiador, mangueras y líquido refrigerante</td>
+          <td>1 hora</td>
+        </tr>
+      </tbody>
+    </table>
+    </section>
+    
+    <div class="contenedor-grid-contacto">
+      <section id="registro" class="seccion-registros">
+        <h2>Agenda tu Cita / Registro</h2>
+        <form action="#" method="get" class="formulario-cita">
+          <fieldset>
+            <legend>Información personal y detalles de la cita</legend>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+
+            <label for="telefono">Teléfono Ecuatoriano:</label>
+            <input 
+              type="tel" 
+              id="telefono" 
+              name="telefono" 
+              required 
+              pattern="^(\+593|0)9[0-9]{8}$" 
+              title="Ingrese un número celular ecuatoriano válido (ej. 0912345678 o +593912345678)"
+              placeholder="09XXXXXXXX">
+            <label for="fecha">Fecha de la cita:</label>
+            <input 
+              type="date" 
+              id="fecha" 
+              name="fecha" 
+              required>
+
+            <label for="servicio">Servicio requerido:</label>
+            <select id="servicio" name="servicio" required>
+              <option value="">-- Selecciona un servicio --</option>
+              <option value="cambio-aceite">Cambio de aceite</option>
+              <option value="alineacion-balanceo">Alineación y Balanceo</option>
+              <option value="frenos-suspension">Frenos y Suspensión</option>
+              <option value="diagnostico-escaner">Diagnóstico por Escáner</option>
+              <option value="sistema-electrico">Sistema Eléctrico y Batería</option>
+              <option value="afinacion-motor">Afinación de Motor</option>
+              <option value="climatizacion">Climatización y Aire Acondicionado</option>
+              <option value="sistema-enfriamiento">Sistema de Enfriamiento</option>
+              <option value="embargue-transmision">Embargo y Transmisión</option>
+              <option value="sistema-escape">Sistema de Escape y Emisiones</option>
+              <option value="hojalateria-pintura">Hojalatería y Pintura</option>
+              <option value="rectificacion-chasis">Rectificación y Enderezado de Chasis</option>
+            </select>
+
+          <button type="submit">Confirmar Registro</button>
+        </fieldset>
+      </form>
+    </section>
+
+      <aside class="panel-lateral-info">
+        <section class="consejo-tecnico">
+          <h3>Consejo del Especialista</h3>
+          <img src="img/mantenimientoPreventivo.jpg" alt="Técnico realizando revisión de niveles de fluidos en el motor de un vehículo" class="img-consejo">
+          <p><strong>Recuerda siempre:</strong> Realizar las revisiones periódicas de niveles y frenos previene fallas mayores en carretera y alarga la vida útil de tu motor.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Taller Mecánico Precision. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>

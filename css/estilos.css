@@ -1,3 +1,18 @@
+/*COLORES DL ROOT */
+:root {
+  --color-fondo: #f4f6f9;
+  --color-texto: #333333;
+  --color-blanco: #ffffff;
+  --color-primario: #0f172a;
+  --color-secundario: #263A5F;
+  --color-acento: #3b82f6;
+  --color-hover-btn: #385d98;
+  --color-borde: #e2e8f0;
+  --color-input-borde: #cbd5e1;
+  --color-exito: #22c55e;
+  --color-tarjeta-bg: #fafafa;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,17 +22,31 @@
 body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  color: #333333;
-  background-color: #f4f6f9;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
 }
 
+
+/*BANNER PRINCIPAL*/
+.banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* CABECERA Y NAVEGACIÓN (HEADER)*/
 header {
-  background-color: #1e293b;
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+  color: var(--color-blanco);
   padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header h1 {
@@ -37,7 +66,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: #ffffff;
+  color: var(--color-blanco);
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
@@ -45,6 +74,199 @@ header nav ul li a {
   border-radius: 4px;
 }
 
+header nav ul li a[href^="#"] {
+  transition: background-color 0.3s ease;
+  border-bottom: 2px solid var(--color-acento);
+}
+
+header nav ul li a[href^="#"]:hover,
+header nav ul li a[href^="#"]:focus {
+  background-color: var(--color-acento);
+}
+
+
+/* CONTENEDOR PRINCIPAL Y SECCIONES (MAIN)*/
+main {
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+section {
+  background: var(--color-blanco);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+/* SERVICIOS (INFORMACIÓN COMPLETA DE LOS 12 SERVICIOS)*/
+.contenedor-servicios {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tarjeta-servicio {
+  border: 1px solid var(--color-borde);
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: var(--color-tarjeta-bg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+
+/* TABLA DE SERVICIOS*/
+.seccion-tabla-servicios {
+  background: var(--color-blanco);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  overflow-x: auto; 
+}
+
+.seccion-tabla-servicios h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-primario);
+}
+
+.seccion-tabla-servicios caption {
+  font-size: 0.9rem;
+  color: var(--color-texto);
+  margin-bottom: 0.75rem;
+  text-align: left;
+  font-style: italic;
+}
+
+.seccion-tabla-servicios table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.seccion-tabla-servicios th,
+.seccion-tabla-servicios td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.seccion-tabla-servicios th {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  font-weight: 600;
+}
+
+.seccion-tabla-servicios tbody th {
+  background-color: var(--color-tarjeta-bg);
+  color: var(--color-texto);
+  font-weight: 500;
+  border-right: 1px solid var(--color-borde);
+}
+
+.seccion-tabla-servicios tbody tr:hover {
+  background-color: var(--color-fondo);
+}
+
+
+/*  CONTENEDOR GRID DE CONTACTO Y FORMULARIO*/
+.contenedor-grid-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contenedor-grid-contacto > section,
+.contenedor-grid-contacto > aside {
+  margin-bottom: 0; 
+}
+
+.formulario-cita {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.formulario-cita fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-cita legend {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-primario);
+}
+
+.formulario-cita label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.formulario-cita input,
+.formulario-cita select,
+.formulario-cita button {
+  padding: 0.5rem;
+  border: 1px solid var(--color-input-borde);
+  border-radius: 7px;
+  font-size: 1rem;
+}
+
+.formulario-cita input:focus,
+.formulario-cita select:focus,
+.formulario-cita button:focus {
+  outline: 2px solid var(--color-acento);
+}
+
+.formulario-cita input:required:valid {
+  border-color: var(--color-exito);
+}
+
+.formulario-cita button {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.formulario-cita button:hover {
+  background-color: var(--color-hover-btn);
+}
+
+
+/* PANEL LATERAL (ASIDE)*/
+.panel-lateral {
+  margin-bottom: 2rem;
+}
+
+
+/* PIE DE PÁGINA (FOOTER)*/
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  margin-top: 2rem;
+}
+
+
+/*DISEÑO RESPONSIVO*/
 @media (min-width: 768px) {
   header {
     flex-direction: row;
@@ -62,5 +284,22 @@ header nav ul li a {
 
   header nav ul {
     gap: 1.5rem;
+  }
+
+  .contenedor-servicios {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .contenedor-grid-contacto {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .formulario-cita {
+    max-width: 600px;
+    margin: 1rem auto 0 auto;
   }
 }
