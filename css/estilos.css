@@ -6,7 +6,6 @@
   --color-secundario: #263A5F;
   --color-acento: #3b82f6;
   --color-borde: #cbd5e1;
-  --color-tarjeta-bg: #f4f6f9;
 }
 
 *, *::before, *::after {
@@ -32,7 +31,7 @@ body {
 }
 
 
-/* CABECERA Y NAVEGACIÓN (HEADER) - Usando color primario */
+/* CABECERA Y NAVEGACIÓN (HEADER) */
 header {
   background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
   color: var(--color-blanco);
@@ -76,7 +75,7 @@ header nav ul li a[href^="#"] {
 }
 
 header nav ul li a[href^="#"]:hover{
-  background-color: var(--color-acento);
+  background-color: var(--color-texto);
 }
 
 
@@ -108,7 +107,7 @@ section {
   border: 1px solid var(--color-borde);
   padding: 1rem;
   border-radius: 6px;
-  background-color: var(--color-tarjeta-bg);
+  background-color: var(--color-fondo);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
@@ -118,12 +117,7 @@ section {
 
 /* TABLA DE SERVICIOS */
 .seccion-tabla-servicios {
-  background: var(--color-blanco);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
 .seccion-tabla-servicios h2 {
@@ -161,7 +155,7 @@ section {
 }
 
 .seccion-tabla-servicios tbody th {
-  background-color: var(--color-tarjeta-bg);
+  background-color: var(--color-fondo);
   color: var(--color-texto);
   font-weight: 500;
   border-bottom: 1px solid var(--color-borde);
@@ -178,11 +172,6 @@ section {
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 2rem;
-}
-
-.contenedor-grid-contacto > section,
-.contenedor-grid-contacto > aside {
-  margin-bottom: 0; 
 }
 
 .formulario-cita {
@@ -289,9 +278,11 @@ footer {
     gap: 2rem;
     align-items: start;
   }
-
-  .formulario-cita {
-    max-width: 600px;
-    margin: 1rem auto 0 auto;
+  
+  .img-consejo{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
   }
 }

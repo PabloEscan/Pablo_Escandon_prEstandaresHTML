@@ -6,9 +6,9 @@
   <title>Taller Mecánico Precision</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
-  <img src="img/bannerAutos.jpg" alt="Banner Taller Mecánico" class="banner">
-  <header>
+<body>  
+  <img src="img/bannerAutos.jpg" alt="" class="banner">
+  <header class = "header-principal">
     <h1>Taller Mecánico</h1>
     <nav>
       <ul>
@@ -148,10 +148,12 @@
           <fieldset>
             <legend>Información personal y detalles de la cita</legend>
             <label for="nombre">Nombre completo:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+            <input type="text" id="nombre" name="nombre" autocomplete="name" 
+            required placeholder="Ej. Juan Pérez">
 
             <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+            <input type="email" id="email" name="email" autocomplete="email" 
+            required placeholder="ejemplo@correo.com">
 
             <label for="telefono">Teléfono Ecuatoriano:</label>
             <input 
@@ -161,13 +163,14 @@
               required 
               pattern="^(\+593|0)9[0-9]{8}$" 
               title="Ingrese un número celular ecuatoriano válido (ej. 0912345678 o +593912345678)"
-              placeholder="09XXXXXXXX">
+              placeholder="09XXXXXXXX"
+              autocomplete="tel">
             <label for="fecha">Fecha de la cita:</label>
             <input 
               type="date" 
               id="fecha" 
               name="fecha" 
-              min = "20026-10-25"
+              min = "2026-10-25"
               max = "2026-12-30"
               required>
 
